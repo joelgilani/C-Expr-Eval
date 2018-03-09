@@ -8,7 +8,7 @@
 #ifndef GENERIC_TYPE_H
 #define GENERIC_TYPE_H
 
-typedef char* ItemType;   // define generic type
+typedef char* ItemType;// define generic type
 
 // Values and format specifiers required for each specific generic type
 #define ITEMTYPE_NONE ""

@@ -8,11 +8,12 @@
  *  Date:    Mar. 6, 2018
  */
 
+#include "ilinkedlist.h"
 
 /*******************
  * PRIVATE TYPE DECLARATION
  ********************/
-
+typedef LinkedList2_t IntStack_t;
 
 
 
