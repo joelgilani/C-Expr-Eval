@@ -234,8 +234,46 @@ Queue_t toPostfix(Queue_t infix_tokens)
 // POST: returns the result of evaluating the post-fix expression.
 int evalExpr(Queue_t expression)
 {
+IntStack_t stack = istackCreate();
 
-	printf("NOT IMPLEMENTED YET -- that's your job ;-)\n");
-	return -1;  // STUB
+while(!qIsEmpty(expression))
+{
+	if(isOperand(qFront(expression)))
+	istackPush(&stack,operandValue(qDequeue(&expression)));
+	
+	else
+	{
+		assert(isOperator(qFront(expression)));
+		int right = (istackPop(&stack));
+		int left =  (istackPop(&stack));
+		char* operator = (qDequeue(&expression));
+		
+		switch (symbol(operator)) 
+		{
+			case '+':
+			istackPush(&stack, left + right);
+			break;
+			
+			case '-':
+			istackPush(&stack, left - right);
+			break;
+			
+			case '*':
+			istackPush(&stack, left * right);
+			break;
+			
+			case '/':
+			istackPush(&stack, left / right);
+			break; 
+			
+		}
+	}
 
 }
+
+int result = istackPop(&stack);
+istackDestroy(&stack);
+
+return result;
+}
+                                                                                                                                                                                                                                       

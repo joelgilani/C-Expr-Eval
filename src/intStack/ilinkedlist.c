@@ -11,12 +11,12 @@
 #include <assert.h>
 #include <limits.h>
 
-#include "iLinkedList.h"
+#include "ilinkedlist.h"
 
 //------ Node2 --------
 Node2_t* Node2Create(int value) 
 {
-    Node2_t* Node2 = malloc(sizeof(Node2_t));
+    Node2_t *Node2 = malloc(sizeof(Node2_t));
     Node2->data = value;
     Node2->next = NULL;
     return Node2;
@@ -24,16 +24,14 @@ Node2_t* Node2Create(int value)
 
 void Node2Print(Node2_t Node2) 
 {
-   char frmt[10];  // dynamically craft the format specifier 
-   sprintf(frmt,"[%s]%%s", "%s");
-   printf(frmt, Node2.data, Node2.next ? "-->" : "--|");
+   printf("[%d]%s",Node2.data, Node2.next ? "-->" : "--|");
 }
 
 
 //----- LINKED LIST -----
-LinkedList2_t llCreate() 
+LinkedList2_t illCreate() 
 {
-   Node2_t* dummy = Node2Create("");
+   Node2_t* dummy = Node2Create(-2147483647);
    LinkedList2_t list = {dummy, dummy};
    return list;
 }

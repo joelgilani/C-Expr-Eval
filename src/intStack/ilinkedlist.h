@@ -24,6 +24,7 @@ typedef struct Node2 Node2_t;
 
 
 Node2_t* Node2Create(int value);
+
 void Node2Print(Node2_t Node2); 
 
 
@@ -44,7 +45,7 @@ Node2_t* illUnlinkAfter(LinkedList2_t* list, Node2_t* cursor);
  *  PUBLIC INTERFACE
  *********************/
 
-LinkedList2_t llCreate();
+LinkedList2_t illCreate();
 
 void illDestroy(LinkedList2_t* list);
 

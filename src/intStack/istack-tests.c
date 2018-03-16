@@ -10,6 +10,7 @@
 #include <stdbool.h>
 #include <assert.h>
 
+
 #include "istack.h"
 
 //----- TEST DRIVER -----
@@ -25,7 +26,7 @@ int main( )
 
    printf("\nStack:  ");
    istackPrint(istack);
-
+   
    assert(!istackIsEmpty(istack));
 
    printf("Pop: %d\n", istackPop(&istack));

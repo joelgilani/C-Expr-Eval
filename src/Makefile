@@ -5,8 +5,8 @@ ds: ds/lib/libds.a
 ds/lib/libds.a:
 	$(MAKE) -C ds
         
-eval: intStack/istack.h intStack/istack.c ds/lib/libds.a lab7.c
-	gcc intStack/istack.c lab7.c -Lds/lib -lds -o eval
+eval: intStack/ilinkedlist.h intStack/ilinkedlist.c intStack/istack.h intStack/istack.c ds/lib/libds.a lab7.c
+	gcc intStack/ilinkedlist.c intStack/istack.c lab7.c -Lds/lib -lds -o eval
 
 clean:
 	@rm -f *.o eval

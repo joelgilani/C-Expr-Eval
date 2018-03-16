@@ -23,7 +23,7 @@ void istackDestroy(IntStack_t* stack)
    illDestroy(stack);
 }
 
-void istackPrint(const  stack)
+void istackPrint(const IntStack_t stack)
 {
    illPrint(stack);
 }

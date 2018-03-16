@@ -64,4 +64,4 @@ int istackPop( IntStack_t *stack );
  * PRE: ! istackIsFull( stack )
  * POST: istackTop( stack ) == item
  */
-int istackPush( IntStack_t *stack, int item);
+void istackPush( IntStack_t *stack, int item);
